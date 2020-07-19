@@ -1246,7 +1246,7 @@ namespace InvoiceAdd
 			
 
 				ICustomerRetList customerRetList = response.Detail as ICustomerRetList;
-				if (!(customerRetList.Count==0))
+				if ((customerRetList != null) && (!(customerRetList.Count==0)))
 				{
 					for (int ndx=0; ndx<=(customerRetList.Count-1); ndx++)
 					{
